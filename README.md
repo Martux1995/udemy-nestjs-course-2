@@ -29,3 +29,11 @@ npm run start:dev
 ```
 GET http://localhost:3000/api/v2/seed
 ```
+
+# Production Build
+1. Generate  `.env.prod`
+2. Fill environment vars in `.env.prod`
+3. Generate new Docker image
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
