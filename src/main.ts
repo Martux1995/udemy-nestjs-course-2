@@ -14,6 +14,8 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(3000);
+  await app.listen(process.env.APP_PORT);
+  console.log(`App start in port ${process.env.APP_PORT}`);
+  
 }
 bootstrap();
